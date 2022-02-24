@@ -1,0 +1,24 @@
+.Container-item {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 140px;
+  margin: 16px;
+  border-radius: 10px;
+}
+.Container-item-background-color-red {
+  background-color: #bf0404;
+  border-radius: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Font-white {
+  color: #ffffff;
+}
+.Adjust-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
