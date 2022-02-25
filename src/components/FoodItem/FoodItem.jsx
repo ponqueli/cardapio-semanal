@@ -15,7 +15,12 @@ const FoodItem = (props) => {
             {item.day}
           </div>
           <div className="card-body text-dark Adjust-center">
-            <h5 className="card-title">{item.meal}</h5>
+            {item.dayInt !== 5 && 
+              <h5 className="card-title">{item.meal } e { item.mistura}</h5>
+            }
+            {item.dayInt === 5 && 
+              <h5 className="card-title"> Marmita</h5>
+            }
             {/* <p className="card-text">
                 arroz e feijão
             </p> */}

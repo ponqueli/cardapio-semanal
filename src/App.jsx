@@ -78,7 +78,7 @@ function App() {
     },
     {
       id: 17,
-      meal: "Couve flor gratinada",
+      meal: "Linguiça",
     },
     {
       id: 18,
@@ -90,19 +90,62 @@ function App() {
     },
     {
       id: 20,
-      meal: "Batata frita",
+      meal: "Carne de panela com bacon",
     },
     {
       id: 21,
-      meal: "Couve Flor com Bacon",
+      meal: "Bife a rolê",
     },
     {
       id: 22,
       meal: "Yakissoba",
-    },
+    },{
+      id: 23,
+      meal: "Frango xadrez",
+    },{
+      id: 23,
+      meal: "Quibe",
+    }
   ];
 
+  const misturas = [
+  {
+    id: 0,
+    mistura: "Couve flor gratinada"
+  },{
+    id: 1,
+    mistura: "Batata frita"
+  },{
+    id: 2,
+    mistura: "Couve com Bacon"
+  },{
+    id: 3,
+    mistura: "Purê de batata com queijo"
+  },{
+    id: 4,
+    mistura: "Abobrinha"
+  },{
+    id: 5,
+    mistura: "Arroz com calabresa"
+  },{
+    id: 6,
+    mistura: "Legumes sotê"
+  },{
+    id: 7,
+    mistura: "Quiabo"
+  },{
+    id: 8,
+    mistura: "Vagem"
+  },{
+    id: 9,
+    mistura: "Creme de milho"
+  },{
+    id: 10,
+    mistura: "Brócolis"
+  }]
+
   const mealsToShow = [];
+  const misturasToShow = [];
 
   useEffect(() => {
     generateRandomOptions();
@@ -131,7 +174,9 @@ function App() {
     let qtdDays = 1;
     while (qtdDays !== 8) {
       let aleatoryNumber = generateAleatoryNumber(0, meals.length - 1);
+      let aleatoryNumberMistura = generateAleatoryNumber(0, misturas.length - 1);
       const itemFound = meals[aleatoryNumber];
+      const itemFoundMistura = misturas[aleatoryNumberMistura];
 
       if (
         mealsToShow.length === 0 ||
@@ -139,8 +184,10 @@ function App() {
       ) {
         let itemWithDay = Object.assign({}, itemFound, {
           day: getDayOfWeek(qtdDays),
+          dayInt:qtdDays,
           backgroundColor: getBackgroundColor(qtdDays),
           meal: qtdDays === 5 ? "Marmita" : meals[aleatoryNumber].meal,
+          mistura: itemFoundMistura.mistura
         });
         mealsToShow.push(itemWithDay);
         qtdDays++;
