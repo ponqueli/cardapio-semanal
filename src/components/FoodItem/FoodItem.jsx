@@ -9,7 +9,7 @@ const FoodItem = (props) => {
           className="Container-item card mb-3 animate__animated animate__fadeInDown"
         >
           <div
-            className="card-header Font-white"
+            className="card-header Font-white fs-4"
             style={{ backgroundColor: item.backgroundColor }}
           >
             {item.day}

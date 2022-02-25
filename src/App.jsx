@@ -10,7 +10,7 @@ function App() {
   const meals = [
     {
       id: 0,
-      meal: "Arroz e Feijão",
+      meal: "Ovo frito",
     },
     {
       id: 1,
@@ -90,7 +90,7 @@ function App() {
     },
     {
       id: 20,
-      meal: "Peixe panga",
+      meal: "Batata frita",
     },
     {
       id: 21,
@@ -123,7 +123,7 @@ function App() {
   }
 
   function getBackgroundColor(day) {
-    if (day === 6 || day === 7) return "#081159";
+    if (day === 5) return "#081159";
     return "#BF0404";
   }
 
@@ -140,6 +140,7 @@ function App() {
         let itemWithDay = Object.assign({}, itemFound, {
           day: getDayOfWeek(qtdDays),
           backgroundColor: getBackgroundColor(qtdDays),
+          meal: qtdDays === 5 ? "Marmita" : meals[aleatoryNumber].meal,
         });
         mealsToShow.push(itemWithDay);
         qtdDays++;
@@ -162,10 +163,10 @@ function App() {
         <div className="d-grid gap-1 col-3 mx-auto">
           <button
             type="button"
-            className="btn-lg btn btn-primary Button-generate"
+            className="btn-lg btn btn-primary Button-generate animate__animated animate__shakeX"
             onClick={generateRandomOptions}
           >
-            O que tem de bom pra semana?
+            Gerar 👆🏼
           </button>
         </div>
       </div>
