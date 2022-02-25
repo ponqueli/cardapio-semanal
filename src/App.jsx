@@ -99,53 +99,63 @@ function App() {
     {
       id: 22,
       meal: "Yakissoba",
-    },{
+    },
+    {
       id: 23,
       meal: "Frango xadrez",
-    },{
+    },
+    {
       id: 23,
       meal: "Quibe",
-    }
+    },
   ];
 
   const misturas = [
-  {
-    id: 0,
-    mistura: "Couve flor gratinada"
-  },{
-    id: 1,
-    mistura: "Batata frita"
-  },{
-    id: 2,
-    mistura: "Couve com Bacon"
-  },{
-    id: 3,
-    mistura: "Purê de batata com queijo"
-  },{
-    id: 4,
-    mistura: "Abobrinha"
-  },{
-    id: 5,
-    mistura: "Arroz com calabresa"
-  },{
-    id: 6,
-    mistura: "Legumes sotê"
-  },{
-    id: 7,
-    mistura: "Quiabo"
-  },{
-    id: 8,
-    mistura: "Vagem"
-  },{
-    id: 9,
-    mistura: "Creme de milho"
-  },{
-    id: 10,
-    mistura: "Brócolis"
-  }]
-
-  const mealsToShow = [];
-  const misturasToShow = [];
+    {
+      id: 0,
+      mistura: "Couve flor gratinada",
+    },
+    {
+      id: 1,
+      mistura: "Batata frita",
+    },
+    {
+      id: 2,
+      mistura: "Couve com Bacon",
+    },
+    {
+      id: 3,
+      mistura: "Purê de batata com queijo",
+    },
+    {
+      id: 4,
+      mistura: "Abobrinha",
+    },
+    {
+      id: 5,
+      mistura: "Arroz com calabresa",
+    },
+    {
+      id: 6,
+      mistura: "Legumes sotê",
+    },
+    {
+      id: 7,
+      mistura: "Quiabo",
+    },
+    {
+      id: 8,
+      mistura: "Vagem",
+    },
+    {
+      id: 9,
+      mistura: "Creme de milho",
+    },
+    {
+      id: 10,
+      mistura: "Brócolis",
+    },
+  ];
 
   useEffect(() => {
     generateRandomOptions();
@@ -171,10 +181,14 @@ function App() {
   }
 
   function generateRandomOptions() {
+    let mealsToShow = [];
     let qtdDays = 1;
     while (qtdDays !== 8) {
       let aleatoryNumber = generateAleatoryNumber(0, meals.length - 1);
-      let aleatoryNumberMistura = generateAleatoryNumber(0, misturas.length - 1);
+      let aleatoryNumberMistura = generateAleatoryNumber(
+        0,
+        misturas.length - 1
+      );
       const itemFound = meals[aleatoryNumber];
       const itemFoundMistura = misturas[aleatoryNumberMistura];
 
@@ -184,16 +198,16 @@ function App() {
       ) {
         let itemWithDay = Object.assign({}, itemFound, {
           day: getDayOfWeek(qtdDays),
-          dayInt:qtdDays,
+          dayInt: qtdDays,
           backgroundColor: getBackgroundColor(qtdDays),
           meal: qtdDays === 5 ? "Marmita" : meals[aleatoryNumber].meal,
-          mistura: itemFoundMistura.mistura
+          mistura: itemFoundMistura.mistura,
         });
         mealsToShow.push(itemWithDay);
         qtdDays++;
       }
     }
-    setItens(mealsToShow);
+    if (mealsToShow.length > 0) setItens(mealsToShow);
   }
 
   return (
@@ -210,7 +224,7 @@ function App() {
         <div className="d-grid gap-1 col-3 mx-auto">
           <button
             type="button"
-            className="btn-lg btn btn-primary Button-generate animate__animated animate__shakeX"
+            className="btn-lg btn btn-primary Button-generate hvr-float-shadow"
             onClick={generateRandomOptions}
           >
             Gerar 👆🏼

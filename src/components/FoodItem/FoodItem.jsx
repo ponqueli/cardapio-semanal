@@ -5,25 +5,22 @@ const FoodItem = (props) => {
     <>
       {itens.map((item) => (
         <div
-          key={item.id}
-          className="Container-item card mb-3 animate__animated animate__fadeInDown"
+          key={item.dayInt}
+          className="Container-item card mb-3 hvr-float"
         >
           <div
-            className="card-header Font-white fs-4"
+            className="card-header Font-white fs-4 Title-hover"
             style={{ backgroundColor: item.backgroundColor }}
           >
             {item.day}
           </div>
           <div className="card-body text-dark Adjust-center">
-            {item.dayInt !== 5 && 
-              <h5 className="card-title">{item.meal } e { item.mistura}</h5>
-            }
-            {item.dayInt === 5 && 
-              <h5 className="card-title"> Marmita</h5>
-            }
-            {/* <p className="card-text">
-                arroz e feijão
-            </p> */}
+            {item.dayInt !== 5 && (
+              <h5 className="card-title Hover">
+                {item.meal} e {item.mistura}
+              </h5>
+            )}
+            {item.dayInt === 5 && <h5 className="card-title"> Marmita</h5>}
           </div>
         </div>
       ))}
