@@ -108,6 +108,28 @@ function App() {
       id: 23,
       meal: "Quibe",
     },
+    {
+      id: 24,
+      meal: "Picanha",
+    },{
+      id: 25,
+      meal: "Sopa de mandioca",
+    },{
+      id: 26,
+      meal: "Cupim assado",
+    },{
+      id: 27,
+      meal: "Pizza",
+    },{
+      id: 28,
+      meal: "Panqueca de carne",
+    },{
+      id: 29,
+      meal: "Macarronada",
+    },{
+      id: 30,
+      meal: "Rondelli",
+    },
   ];
 
   const misturas = [
