@@ -204,6 +204,7 @@ function App() {
 
   function generateRandomOptions() {
     let mealsToShow = [];
+    let misturasToShow = [];
     let qtdDays = 1;
     while (qtdDays !== 8) {
       let aleatoryNumber = generateAleatoryNumber(0, meals.length - 1);
@@ -216,7 +217,8 @@ function App() {
 
       if (
         mealsToShow.length === 0 ||
-        !mealsToShow.some((item) => item.id === aleatoryNumber)
+        (!mealsToShow.some((item) => item.id === aleatoryNumber) &&
+        !misturasToShow.some((mistura) => mistura.id === aleatoryNumberMistura))
       ) {
         let itemWithDay = Object.assign({}, itemFound, {
           day: getDayOfWeek(qtdDays),
@@ -226,6 +228,7 @@ function App() {
           mistura: itemFoundMistura.mistura,
         });
         mealsToShow.push(itemWithDay);
+        misturasToShow.push(itemFoundMistura);
         qtdDays++;
       }
     }
