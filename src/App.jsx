@@ -86,22 +86,18 @@ function App() {
     },
     {
       id: 19,
-      meal: "Peixe frito",
-    },
-    {
-      id: 20,
       meal: "Carne de panela com bacon",
     },
     {
-      id: 21,
+      id: 20,
       meal: "Bife a rolê",
     },
     {
-      id: 22,
+      id: 21,
       meal: "Yakissoba",
     },
     {
-      id: 23,
+      id: 22,
       meal: "Frango xadrez",
     },
     {
@@ -110,25 +106,39 @@ function App() {
     },
     {
       id: 24,
-      meal: "Picanha",
-    },{
-      id: 25,
-      meal: "Sopa de mandioca",
-    },{
-      id: 26,
-      meal: "Cupim assado",
-    },{
-      id: 27,
       meal: "Pizza",
-    },{
-      id: 28,
+    },
+    {
+      id: 25,
       meal: "Panqueca de carne",
-    },{
-      id: 29,
-      meal: "Macarronada",
-    },{
-      id: 30,
+    },
+    {
+      id: 26,
+      meal: "Macarronada com creme de leite",
+    },
+    {
+      id: 27,
       meal: "Rondelli",
+    },
+    {
+      id: 28,
+      meal: "Omelete",
+    },
+    {
+      id: 29,
+      meal: "Carne de porco",
+    },
+    {
+      id: 30,
+      meal: "Escondidinho de Carne",
+    },
+    {
+      id: 30,
+      meal: "Torta fria de atum simples",
+    },
+    {
+      id: 31,
+      meal: "Rocambole de carne com queijo",
     },
   ];
 
@@ -177,6 +187,10 @@ function App() {
       id: 10,
       mistura: "Brócolis",
     },
+    {
+      id: 11,
+      mistura: "Arroz à Piamontese",
+    },
   ];
 
   useEffect(() => {
@@ -218,7 +232,9 @@ function App() {
       if (
         mealsToShow.length === 0 ||
         (!mealsToShow.some((item) => item.id === aleatoryNumber) &&
-        !misturasToShow.some((mistura) => mistura.id === aleatoryNumberMistura))
+          !misturasToShow.some(
+            (mistura) => mistura.id === aleatoryNumberMistura
+          ))
       ) {
         let itemWithDay = Object.assign({}, itemFound, {
           day: getDayOfWeek(qtdDays),

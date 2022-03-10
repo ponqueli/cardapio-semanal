@@ -38,6 +38,7 @@
 .App-header .Title {
   margin: 10px;
   font-weight: bold;
+  padding-bottom: 10px;
 }
 
 .Button-generate {
