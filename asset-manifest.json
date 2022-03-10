@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/cardapio-semanal/static/css/main.0dde98cd.css",
-    "main.js": "/cardapio-semanal/static/js/main.a2de03f2.js",
+    "main.css": "/cardapio-semanal/static/css/main.04bd372f.css",
+    "main.js": "/cardapio-semanal/static/js/main.dd506b10.js",
     "static/media/food.svg": "/cardapio-semanal/static/media/food.8dd58a4bf6e6dc0ca242ce39e0ac899f.svg",
     "index.html": "/cardapio-semanal/index.html",
-    "main.0dde98cd.css.map": "/cardapio-semanal/static/css/main.0dde98cd.css.map",
-    "main.a2de03f2.js.map": "/cardapio-semanal/static/js/main.a2de03f2.js.map"
+    "main.04bd372f.css.map": "/cardapio-semanal/static/css/main.04bd372f.css.map",
+    "main.dd506b10.js.map": "/cardapio-semanal/static/js/main.dd506b10.js.map"
   },
   "entrypoints": [
-    "static/css/main.0dde98cd.css",
-    "static/js/main.a2de03f2.js"
+    "static/css/main.04bd372f.css",
+    "static/js/main.dd506b10.js"
   ]
 }
