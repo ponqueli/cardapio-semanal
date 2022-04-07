@@ -4,7 +4,7 @@ import logo from "./food.svg";
 import "./App.css";
 
 function App() {
-  const [emptyList, setEmptyList] = useState(false);
+  const [emptyList] = useState(false);
   const [itens, setItens] = useState([]);
 
   const meals = [
